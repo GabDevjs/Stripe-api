@@ -35,7 +35,7 @@ export class SetupServer  {
   }
 
   private setupRouters(): void {
-    this.app.get("/", (req, res) => {
+    this.app.get("/", (_req, res) => {
       console.log("Hello World");
       res.send("Hello World");
     }
