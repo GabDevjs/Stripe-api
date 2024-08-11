@@ -20,7 +20,7 @@ export abstract class BaseController {
         })
       )
     } else {
-      logger.error(JSON.stringify(error));
+      logger.error(JSON.stringify(error)); 
       response.status(500).send(
         ApiError.format({
           code: 500,
