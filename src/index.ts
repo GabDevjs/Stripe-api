@@ -18,22 +18,13 @@ process.on('uncaughtException', (error) => {
   process.exit(ExitStatus.Failure);
 });
 
-    const server = new SetupServer()
-
-    server.init();
+(async (): Promise<void> => {
+  try {
+    const server = new SetupServer();
+    await server.init();
     server.start();
-
-    const exitSignals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM', 'SIGQUIT'];
-    for (const exitSignal of exitSignals) {
-      process.on(exitSignal, async () => {
-        try {
-           server.close();
-          logger.info(`App exited with success`);
-          process.exit(ExitStatus.Success);
-        } catch (error) {
-          logger.error(`App exited with error: ${error}`);
-          process.exit(ExitStatus.Failure);
-        }
-      });
-    }
-
+  } catch (error) {
+    logger.error(`App exited with error: ${error}`);
+    process.exit(ExitStatus.Failure);
+  }
+})();
