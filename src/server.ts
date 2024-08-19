@@ -10,6 +10,7 @@ import swaggerUi from 'swagger-ui-express';
 import apiSchema from './docs/api-schema.json';
 import express from "express";
 import { router } from "./router/index";
+
 export class SetupServer  {
   private server?: http.Server;
   private app: Application;
