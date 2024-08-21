@@ -1,18 +1,19 @@
-# APi stripe
+# Stripe API - Node.js Integration
+Este repositório contém uma implementação prática da integração da API do Stripe utilizando Node.js. É um exemplo básico que cobre os principais recursos do Stripe, como criação de clientes, processamento de pagamentos e gerenciamento de assinaturas.
 
-Desenvolvi uma API para um micro-SaaS de aplicativo de listas de tarefas (todo list) utilizando Node.js e Express. A API permite a gestão eficiente de tarefas, suportando operações CRUD (criar, ler, atualizar e deletar) para usuários e listas de tarefas. Além disso, integrei o Stripe para gerenciar assinaturas e pagamentos, proporcionando uma solução completa para monetização do serviço. A arquitetura da API é projetada para escalabilidade e segurança, garantindo uma experiência fluida tanto para os usuários quanto para os administradores da plataforma.
+## Funcionalidades:
+Criação de Clientes: Crie e gerencie clientes diretamente na plataforma Stripe.
+Processamento de Pagamentos: Implemente fluxos de pagamento seguro com cartões de crédito.
+Assinaturas: Gerencie assinaturas recorrentes e atualize planos conforme necessário.
+Webhooks: Integração com webhooks para lidar com eventos do Stripe em tempo real
+.
+### Tecnologias Utilizadas:
+- Node.js
+- Express.js
+- Stripe SDK
 
-To install dependencies:
-
-```bash
-yarn install 
-```
-
-To run:
-
-```bash
-yarn dev
-```
-
-This project was created using `bun init` in bun v1.1.6. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-# Stripe-api
+# Como Usar:
+- Clone o repositório.
+- Instale as dependências com npm install.
+- Configure suas credenciais do Stripe no arquivo .env.
+- Execute o servidor com npm start.
